@@ -1,0 +1,8 @@
+/* Temporary visual reset */
+.brand img{display:none}
+.brand{gap:0}
+.hero{background:linear-gradient(90deg,rgba(5,8,18,.62),rgba(11,16,32,.35)),url('assets/fond-corse.jpg');background-size:cover;background-position:center}
+.intro{background:#0b1020;color:#fff}
+.intro p{color:rgba(255,255,255,.86)}
+.intro h2{color:#fff}
+.section-label{color:#ffcc1a}
