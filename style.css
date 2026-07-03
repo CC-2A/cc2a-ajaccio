@@ -260,10 +260,37 @@ h3 {
 .section {
   padding: 78px 0;
 }
-.intro,
 .feature:not(.dark),
 .zone {
   background: #fff;
+}
+.intro {
+  position: relative;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(5, 8, 18, 0.78) 0%, rgba(11, 16, 32, 0.58) 48%, rgba(11, 16, 32, 0.30) 100%),
+    url("assets/fond-corse.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 204, 26, 0.08), transparent 30%);
+  pointer-events: none;
+}
+.intro .container {
+  position: relative;
+  z-index: 1;
+}
+.intro .section-label {
+  color: #ffcc1a;
+}
+.intro h2 {
+  color: #ffffff;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.45);
 }
 .two-cols,
 .feature-grid,
@@ -273,13 +300,17 @@ h3 {
   grid-template-columns: 0.95fr 1.05fr;
   gap: 46px;
 }
-.intro p,
 .section-head p,
 .contact p,
 .service-card p,
 .project-card p {
   color: var(--muted);
   font-size: 18px;
+}
+.intro p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 18px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 .section-head {
   max-width: 760px;
@@ -420,6 +451,13 @@ h3 {
         rgba(11, 16, 32, 0.42),
         rgba(11, 16, 32, 0.25)
       ),
+      url("assets/fond-corse.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+  .intro {
+    background:
+      linear-gradient(180deg, rgba(5, 8, 18, 0.82) 0%, rgba(11, 16, 32, 0.60) 55%, rgba(11, 16, 32, 0.34) 100%),
       url("assets/fond-corse.jpg");
     background-size: cover;
     background-position: center center;
