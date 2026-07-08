@@ -1,5 +1,6 @@
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
+const realisationsUrl = "https://cc-2a.github.io/cc2a-ajaccio/realisations.html";
 
 const photoSection = document.querySelector(".work-gallery-section");
 if (photoSection) {
@@ -22,6 +23,14 @@ if (photoSection) {
     nav.insertBefore(photoNavLink, contactLink || null);
   }
 }
+
+document.querySelectorAll('a[href="realisations.html"]').forEach((link) => {
+  link.href = realisationsUrl;
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.assign(realisationsUrl);
+  });
+});
 
 if (toggle && nav) {
   toggle.addEventListener("click", () => {
