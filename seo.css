@@ -146,6 +146,83 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
+.google-rating-card {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 26px;
+  padding: 24px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #0b1020, #121a32);
+  color: #ffffff;
+  box-shadow: 0 24px 65px rgba(2, 8, 23, 0.18);
+}
+
+.rating-number {
+  font-size: 54px;
+  line-height: 1;
+  font-weight: 950;
+  color: #ffcc1a;
+}
+
+.rating-stars {
+  color: #ffcc1a;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.google-rating-card p {
+  margin: 0;
+  color: #dce2ee;
+}
+
+.review-grid-public {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.review-public-card {
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--premium-border);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.review-public-card .stars {
+  color: #ffcc1a;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+}
+
+.review-public-card blockquote {
+  margin: 0;
+  color: #111827;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.review-public-card footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #667085;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.review-actions {
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .main-nav a.active,
 .main-nav a[aria-current="page"] {
   color: #ffcc1a;
@@ -153,7 +230,8 @@
 
 @media (max-width: 980px) {
   .price-grid,
-  .large-grid {
+  .large-grid,
+  .review-grid-public {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -164,7 +242,8 @@
 
 @media (max-width: 760px) {
   .price-grid,
-  .large-grid {
+  .large-grid,
+  .review-grid-public {
     grid-template-columns: 1fr;
   }
 
@@ -172,8 +251,13 @@
     padding: 64px 0 72px;
   }
 
+  .google-rating-card {
+    display: grid;
+  }
+
   .cta-actions,
-  .cta-actions .btn {
+  .cta-actions .btn,
+  .review-actions .btn {
     width: 100%;
   }
 }
