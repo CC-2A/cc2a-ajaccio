@@ -13,8 +13,59 @@ function optimizeMobileHero() {
   }
 }
 
+function optimizeMobileBrandText() {
+  const brand = document.querySelector(".premium-brand");
+  const brandText = brand ? brand.querySelector("span") : null;
+  const brandTitle = brand ? brand.querySelector("strong") : null;
+  const brandSubtitle = brand ? brand.querySelector("small") : null;
+  if (!brand || !brandText || !brandTitle || !brandSubtitle) return;
+
+  if (window.matchMedia("(max-width: 760px)").matches) {
+    Object.assign(brand.style, {
+      flex: "1 1 auto",
+      display: "grid",
+      gridTemplateColumns: "96px minmax(0, 1fr)",
+      alignItems: "center",
+      gap: "0",
+      minWidth: "0",
+    });
+
+    Object.assign(brandText.style, {
+      justifySelf: "center",
+      textAlign: "center",
+      marginLeft: "18px",
+      paddingRight: "4px",
+      transform: "translateX(6px)",
+      minWidth: "0",
+    });
+
+    Object.assign(brandTitle.style, {
+      display: "block",
+      color: "#ffcc1a",
+      textShadow: "0 2px 18px rgba(255, 204, 26, 0.35)",
+      letterSpacing: "0.03em",
+    });
+
+    Object.assign(brandSubtitle.style, {
+      display: "block",
+      color: "#f8e7a1",
+      letterSpacing: "0.16em",
+      textShadow: "0 2px 14px rgba(248, 231, 161, 0.20)",
+    });
+  } else {
+    brand.removeAttribute("style");
+    brandText.removeAttribute("style");
+    brandTitle.removeAttribute("style");
+    brandSubtitle.removeAttribute("style");
+  }
+}
+
 optimizeMobileHero();
-window.addEventListener("resize", optimizeMobileHero);
+optimizeMobileBrandText();
+window.addEventListener("resize", () => {
+  optimizeMobileHero();
+  optimizeMobileBrandText();
+});
 
 document.querySelectorAll(".brand-mark").forEach((mark) => {
   const logo = document.createElement("img");
