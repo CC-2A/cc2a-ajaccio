@@ -8,6 +8,16 @@ document.querySelectorAll(".brand-mark").forEach((mark) => {
   logo.src = logoUrl;
   logo.alt = "Logo CC-2A Plomberie Chauffage";
   logo.loading = "eager";
+  Object.assign(logo.style, {
+    width: "54px",
+    height: "54px",
+    objectFit: "contain",
+    borderRadius: "14px",
+    background: "#ffffff",
+    padding: "4px",
+    boxShadow: "0 12px 30px rgba(255, 204, 26, 0.18)",
+    flex: "0 0 auto",
+  });
   mark.replaceWith(logo);
 });
 
