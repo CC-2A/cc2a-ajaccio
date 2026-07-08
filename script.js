@@ -1,5 +1,15 @@
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
+const logoUrl = "https://cc-2a.github.io/cc2a-ajaccio/Logos%20CC-2A%20.jpg";
+
+document.querySelectorAll(".brand-mark").forEach((mark) => {
+  const logo = document.createElement("img");
+  logo.className = "brand-logo";
+  logo.src = logoUrl;
+  logo.alt = "Logo CC-2A Plomberie Chauffage";
+  logo.loading = "eager";
+  mark.replaceWith(logo);
+});
 
 const photoSection = document.querySelector(".work-gallery-section");
 if (photoSection) {
