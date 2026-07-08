@@ -1,6 +1,6 @@
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
-const logoUrl = "https://cc-2a.github.io/cc2a-ajaccio/Logos%20CC-2A%20.jpg";
+const logoUrl = "https://cc-2a.github.io/cc2a-ajaccio/Logos%20CC-2A%20.png";
 
 document.querySelectorAll(".brand-mark").forEach((mark) => {
   const logo = document.createElement("img");
