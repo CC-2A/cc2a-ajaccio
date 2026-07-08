@@ -1,0 +1,307 @@
+/* CC-2A premium visual layer */
+:root {
+  --premium-bg: #070a13;
+  --premium-card: #ffffff;
+  --premium-soft: #f3f6fb;
+  --premium-border: rgba(15, 23, 42, 0.10);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(77, 151, 223, 0.10), transparent 28%),
+    #f7f8fb;
+}
+
+.site-header {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+.nav {
+  height: 82px;
+}
+
+.premium-brand {
+  gap: 12px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffcc1a, #fff2a6);
+  color: #0b1020;
+  font-weight: 950;
+  letter-spacing: -0.08em;
+  box-shadow: 0 12px 30px rgba(255, 204, 26, 0.18);
+}
+
+.premium-brand strong {
+  font-size: 27px;
+}
+
+.premium-brand small {
+  letter-spacing: 0.10em;
+}
+
+.main-nav {
+  gap: 18px;
+  font-size: 13px;
+}
+
+.premium-hero {
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  padding: 96px 0;
+  background:
+    linear-gradient(90deg, rgba(7, 10, 19, 0.88) 0%, rgba(11, 16, 32, 0.62) 45%, rgba(11, 16, 32, 0.30) 100%),
+    url("assets/fond-corse.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.premium-hero h1 {
+  max-width: 850px;
+}
+
+.premium-side-card {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(180deg, rgba(11, 16, 32, 0.86), rgba(7, 10, 19, 0.82));
+}
+
+.premium-intro {
+  background: #0b1020;
+}
+
+.premium-services,
+.premium-tools,
+.premium-method,
+.premium-realisations {
+  background: linear-gradient(180deg, #fff, #f7f8fb);
+}
+
+.premium-card-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.premium-card,
+.method-grid article,
+.realisation-grid article {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--premium-border);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.premium-card::after,
+.method-grid article::after,
+.realisation-grid article::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -55% -20%;
+  height: 110px;
+  background: radial-gradient(circle, rgba(77, 151, 223, 0.10), transparent 62%);
+  pointer-events: none;
+}
+
+.card-kicker,
+.tool-icon,
+.method-grid span {
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  background: #0b1020;
+  color: #ffcc1a;
+  font-weight: 950;
+  font-size: 14px;
+}
+
+.tool-proof,
+.review-card {
+  margin-top: 28px;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #0b1020, #121a32);
+  color: #fff;
+  box-shadow: 0 24px 65px rgba(2, 8, 23, 0.18);
+}
+
+.tool-proof strong {
+  color: #ffcc1a;
+  font-size: 22px;
+}
+
+.tool-proof span,
+.review-card p {
+  color: #dce2ee;
+}
+
+.premium-feature-dark {
+  background:
+    linear-gradient(135deg, rgba(7, 10, 19, 0.96), rgba(11, 16, 32, 0.92)),
+    url("assets/fond-corse.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.method-grid,
+.realisation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.method-grid article,
+.realisation-grid article {
+  border-radius: 22px;
+  padding: 24px;
+}
+
+.method-grid p,
+.realisation-grid p {
+  color: #667085;
+  font-size: 17px;
+}
+
+.premium-gallery {
+  background: #0b1020;
+  color: #fff;
+}
+
+.premium-gallery p:not(.section-label) {
+  color: #dce2ee;
+  font-size: 18px;
+}
+
+.premium-reviews {
+  background: #f7f8fb;
+}
+
+.review-card {
+  margin-top: 0;
+}
+
+.review-card h2 {
+  color: #fff;
+}
+
+.review-card .btn {
+  flex: 0 0 auto;
+}
+
+.premium-zone .zone-card {
+  background: linear-gradient(135deg, #0b1020, #121a32);
+}
+
+.premium-footer {
+  padding-bottom: 110px;
+}
+
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .main-nav {
+    gap: 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 980px) {
+  .premium-card-grid,
+  .method-grid,
+  .realisation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tool-proof,
+  .review-card {
+    display: grid;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    height: 86px;
+  }
+
+  .main-nav {
+    top: 86px;
+  }
+
+  .premium-hero {
+    min-height: auto;
+    padding: 70px 0 76px;
+  }
+
+  .premium-brand small {
+    font-size: 11px;
+  }
+
+  .brand-mark {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+  }
+
+  .premium-card-grid,
+  .method-grid,
+  .realisation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-proof,
+  .review-card {
+    padding: 22px;
+  }
+
+  .mobile-cta {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 80;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 999px;
+    background: rgba(7, 10, 19, 0.92);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-cta a {
+    text-align: center;
+    padding: 12px 14px;
+    border-radius: 999px;
+    font-weight: 950;
+  }
+
+  .mobile-cta a:first-child {
+    background: #ffcc1a;
+    color: #0b1020;
+  }
+
+  .mobile-cta a:last-child {
+    background: #4d97df;
+    color: #fff;
+  }
+}
+
+@media (max-width: 390px) {
+  .premium-brand strong {
+    font-size: 23px;
+  }
+}
