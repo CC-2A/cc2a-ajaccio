@@ -2,6 +2,20 @@ const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
 const logoUrl = "https://cc-2a.github.io/cc2a-ajaccio/Logos%20CC-2A%20.png";
 
+function optimizeMobileHero() {
+  const mainCallButton = document.querySelector('.hero .hero-actions .btn-primary[href^="tel:"]');
+  if (!mainCallButton) return;
+
+  if (window.matchMedia("(max-width: 760px)").matches) {
+    mainCallButton.style.display = "none";
+  } else {
+    mainCallButton.style.display = "";
+  }
+}
+
+optimizeMobileHero();
+window.addEventListener("resize", optimizeMobileHero);
+
 document.querySelectorAll(".brand-mark").forEach((mark) => {
   const logo = document.createElement("img");
   logo.className = "brand-logo";
